@@ -39,7 +39,13 @@ public class UsuarioService {
 				String authHeader = "Basic " + new String(encodedAuth);
 
 				usuarioLogin.get().setToken(authHeader);
+				usuarioLogin.get().setId(usuarioBD.get().getId());
 				usuarioLogin.get().setNome(usuarioBD.get().getNome());
+				usuarioLogin.get().setFoto(usuarioBD.get().getFoto());
+				usuarioLogin.get().setTipo(usuarioBD.get().getTipo());
+		
+				
+				
 				return usuarioLogin;
 			}
 		}
